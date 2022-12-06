@@ -1,6 +1,6 @@
 # Interview Questions
 
--   [JavaScript]()
+-   [JavaScript](./Javascript/readme.md)
 
 -   [React]()
 
