@@ -26,6 +26,8 @@
 
 # Path to Become Full Stack Developer
 
+    Goal => Remember One Step at a Time
+
 # ![HTMl](https://res.cloudinary.com/dsxhvl3q8/image/upload/v1670584566/HappyLearning/GuidedPath/Stage_1_zv41yb.png)
 
 # ![CSS](https://res.cloudinary.com/dsxhvl3q8/image/upload/v1670584855/HappyLearning/GuidedPath/Stage2_drxmkp.png)
