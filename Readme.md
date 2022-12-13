@@ -2,7 +2,9 @@
 
 ## Learn Development With Easy Steps
 
-## - [Interview Question](./00%20Interview%20Questions/Readme.md) `Started Pushing`
+## - [Interview Question](./00%20Interview%20Questions/Readme.md)
+
+`Started Pushing`
 
 ## - [HTML](./01%20HTML/Readme.md)
 
