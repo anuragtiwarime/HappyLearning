@@ -99,3 +99,103 @@
 49. How events are different in React ?
 
 50. How you use decorators in React ?
+
+51. How to perform automatic redirect after login ?
+
+52. What is React Router ?
+
+53. How React Router is different from history library ?
+
+54. What is the purpose of push and replace methods of history ?
+
+55. What are render props ?
+
+56. What are the popular React-specific linters ?
+
+57. What is the benefit of styles modules ?
+
+58. What are the popular packages for animation ?
+
+59. What are the common folder structures for React ?
+
+60. Is it possible to use async/await in plain React ?
+
+61. How to programmatically trigger click event in React ?
+
+62. What is prop drilling ?
+
+63. What is state mutation and how to prevent it ?
+
+64. What is the difference between useState and useRef hook ?
+
+65. What are React Server components ?
+
+66. How do you get redux scaffolding using create-react-app ?
+
+67. What are the benefits of new JSX transform ?
+
+68. What are the benefits of using typescript with reactjs ?
+
+69. What is the difference between Imperative and Declarative in React ?
+
+70. What is the purpose of eslint plugin for hooks ?
+
+71. What is the difference between async mode and concurrent mode ?
+
+72. What is Concurrent Rendering ?
+
+73. What is MobX ?
+
+74. What are the differences between Redux and MobX ?
+
+75. What is react scripts ?
+
+76. What are the features of create react app ?
+
+77. Describe about data flow in react ?
+
+78. What are typical middleware choices for handling asynchronous calls in Redux ?
+
+79. What is formik ?
+
+80. What is the purpose of forward ref in HOCs ?
+
+81. What is route based code splitting ?
+
+82. What is suspense component ?
+
+83. What are loadable components ?
+
+84. What is dynamic import ?
+
+85. What is React-Intl ?
+
+86. What are the main features of React Intl ?
+
+87. Can you force a component to re-render without calling setState ?
+
+88. What is strict mode in React ?
+
+89. What are React Mixins ?
+
+90. What is a switching component ?
+
+91. How to enable production mode in React ?
+
+92. What is CRA and its benefits ?
+
+93. What is the lifecycle methods order in mounting ?
+
+94. What is React Fiber ?
+
+95. What is the main goal of React Fiber ?
+
+96. What is the difference between useMemo and useCallback ?
+
+97. How to pass data between sibling components using React router ?
+
+98. What is React state batching ?
+
+99. What is the difference between npx and npm ?
+
+100.    How to validate Props in React ?
