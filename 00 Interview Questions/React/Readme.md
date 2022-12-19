@@ -1,98 +1,101 @@
-# React Interview Question and Answer
+# React Interview Question
 
-## `Level 0`
+1. What is virtual DOM ?
 
-<details>
-<summary>What is React?</summary>
-React is an open-source front-end JavaScript library that is used for building user interfaces, especially for single-page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
-</details>
-<br>
+2. How Virtual DOM Works ?
 
-<details>
-<summary>What are the major features of React?</summary>
-The major features of React are:
+3. What is React and What are the major Feature of React ?
 
--   It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
--   Supports server-side rendering.
--   Follows Unidirectional data flow or data binding.
--   Uses reusable/composable UI components to develop the view.
-</details>
-<br>
+4. What is JSx and How is work on Browser ?
 
-<details>
-<summary>What is JSX?</summary>
-JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML). Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax.
+5. What is difference between Element and Components ?
 
-In the example below text inside `<h1>` tag is returned as JavaScript function to the render function.
+6. What is state in react ?
 
-```js
-export default function App() {
-    return (
-        <div>
-            <h1>{'Welcome to Happy Learning'}</h1>
-        </div>
-    );
-}
-```
+7. What is props in React ?
 
-</details>
-<br>
+8. What is pure components ?
 
-<details>
-<summary> Can web browsers read JSX directly? </summary>
+9. What is Class Componnets and What is Function Componet and When to use them ?
 
--   Web browsers cannot read JSX directly. This is because they are built to only read regular JS objects and JSX is not a regular JavaScript object
+10. Difference between State and Props ?
 
--   For a web browser to read a JSX file, the file needs to be transformed into a regular JavaScript object. For this, we use Babel
+11. What is Higher Order Componets ?
 
-</details>
-<br>
+12. What is Context ?
 
-<details>
-<summary>What are the most crucial advantages of using React?</summary>
-Following is a list of the most crucial advantages of using React:
+13. What is Children props ?
 
--   ## React is easy to learn and use
+14. How to write Comments in React ?
 
-    React comes with good availability of documentation, tutorials, and training resources. It is easy for any developer to switch from JavaScript background to React and easily understand and start creating web apps using React. Anyone with little knowledge of JavaScript can start building web applications using React.
+15. What is Higher-Order Components ?
 
--   ## React follows the MVC architecture.
+16. Difference betweenn HTMl and React event Handling ?
 
-    React is the V (view part) in the MVC (Model-View-Controller) architecture model and is referred to as "one of the JavaScript frameworks." It is not fully featured but has many advantages of the open-source JavaScript User Interface (UI) library, which helps execute the task in a better manner.
+17. What are inline Conditional expression ?
 
--   ## React uses Virtual DOM to improve efficiency.
+18. How to bind methods or event handlers in JSX Callback ?
 
-    React uses virtual DOM to render the view. The virtual DOM is a virtual representation of the real DOM. Each time the data changes in a react app, a new virtual DOM gets created. Creating a virtual DOM is much faster than rendering the UI inside the browser. Therefore, with the use of virtual DOM, the efficiency of the app improves. That's why React provides great efficiency.
+19. What are Inline Conditional Expression ?
 
--   ## Creating dynamic web applications is easy.
+20. What is use of Refs and how to create refs ?
 
-    In React, creating a dynamic web application is much easier. It requires less coding and gives more functionality. It uses JSX (JavaScript Extension), which is a particular syntax letting HTML quotes and HTML tag syntax to render particular subcomponents.
+21.What is the difference between a Presentational component and a Container component?
 
--   ## React allows reusable components.
+22. What are the different lifecycle methods?
 
-    React web applications are made up of multiple components where each component has its logic and controls. These components provide a small, reusable piece of HTML code as an output that can be reused wherever you need them. The code reusability helps developers to make their apps easier to develop and maintain. It also makes the nesting of the components easy and allows developers to build complex applications of simple building blocks. The reuse of components also increases the pace of development.
+23. Explain React Hooks.
 
--   ## React has a rich set of libraries.
-    React has a huge ecosystem of libraries and provides you the freedom to choose the tools, libraries, and architecture for developing the best application based on your requirement.
+24. What advantages are there in using arrow functions ?
 
-</details>
-<br>
+25. What is equivalent of the following using React.createElement ?
 
-<details>
-<summary>Why we use JSX?</summary>
--   It is faster than regular JavaScript because it performs optimization while translating the code to JavaScript.
--   Instead of separating technologies by putting markup and logic in separate files, React uses components that contain both.
+26.Why virtual DOM is faster to update than real DOM ?
 
--   It makes easier to create templates.
-</details>
-<br>
+27. What is the useEffect hook used for ?
 
-<details>
-<summary></summary>
-</details>
-<br>
+28. What is the difference between useEffect and useLayoutEffect ?
 
-<details>
-<summary></summary>
-</details>
-<br>
+29. Styled-Components vs Inline Styling in React ?
+
+30. Explain Styled Component in React with example ?
+
+31. Can you explain the difference between a pure and impure function, and why it matters in the context of React ?
+
+32.How do you test a component that uses hooks ?
+
+33. What are some common hooks that are used in React ?
+
+34. What is a hook in React and why are they useful ?
+
+35. How can you optimize performance in a ReactJS application ?
+
+36. What is the difference between Shadow DOM and Virtual DOM ?
+
+37. What is the purpose of using super constructor with props argument ?
+
+38. Why React uses className over class attribute ?
+
+39. What are the limitations of React ?
+
+40. What are the advantages of React ?
+
+41. How to apply validation on props in React ?
+
+42. What are stateful components and Stateless Components ?
+
+43. What is reconciliation ?
+
+44. How to set state with a dynamic key name ?
+
+45. What are fragments and how it is better than Container div ?
+
+46. What is the use of react-dom package ?
+
+47. Error Boundries in React ?
+
+48. How to use InnerHtml in React ?
+
+49. How events are different in React ?
+
+50. How you use decorators in React ?
