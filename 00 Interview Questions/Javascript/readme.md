@@ -1,5 +1,5 @@
 # JavaScript Interview Question and Answer
-
+`level 0`
 <details >
 <summary>
 List some features of JavaScript.
@@ -1866,7 +1866,5 @@ Objects are similar to Maps in that both let you set keys to values, retrieve th
 2. Splice:
    - Modifies the original array(mutable).
    - Returns the deleted elements as array.
-   - Used to insert or delete elements to/from array
-
 </details>
 <br/>
