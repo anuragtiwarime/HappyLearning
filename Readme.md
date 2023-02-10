@@ -4,8 +4,6 @@
 
 ## - [Interview Question](./00%20Interview%20Questions/Readme.md)
 
-`Started Pushing`
-
 ## - [HTML](./01%20HTML/Readme.md)
 
 ## - [CSS](./02%20CSS/Readme.md)
