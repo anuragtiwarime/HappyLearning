@@ -1,5 +1,7 @@
 # JavaScript Interview Question and Answer
+
 `level 0`
+
 <details >
 <summary>
 List some features of JavaScript.
@@ -532,55 +534,61 @@ var person = new Person("Prabir", "Kumar", 25);
 
 - call():
 
-     The call() method invokes a function with a given this value and arguments provided one by one
+  The call() method invokes a function with a given this value and arguments provided one by one
 
-     ---
+  ***
 
-     ```js
-              var employee1 = {firstName: 'Prabir', lastName: 'Kumar'};
-              var employee2 = {firstName: 'Kumar', lastName: 'P'};
+  ````js
+           var employee1 = {firstName: 'Prabir', lastName: 'Kumar'};
+           var employee2 = {firstName: 'Kumar', lastName: 'P'};
 
-             function greet(greeting1, greeting2) {
-              console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
-             }
+          function greet(greeting1, greeting2) {
+           console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
+          }
 
-             greet.call(employee1, 'Hello', 'How are you?'); // Hello Prabir Kumar, How are you?
-            greet.call(employee2, 'Hello', 'How are you?'); // Hello Kumar P, How are you?
-      
-         ```
+          greet.call(employee1, 'Hello', 'How are you?'); // Hello Prabir Kumar, How are you?
+         greet.call(employee2, 'Hello', 'How are you?'); // Hello Kumar P, How are you?
+
+      ```
+  ````
+
 - apply():
-           Invokes the function and allows you to pass in arguments as an array
+  Invokes the function and allows you to pass in arguments as an array
+
 ---
+
 ```js
- var employee1 = {firstName: 'Prabir', lastName: 'Kumar'};
- var employee2 = {firstName: 'Kumar', lastName: 'P'};
+var employee1 = { firstName: "Prabir", lastName: "Kumar" };
+var employee2 = { firstName: "Kumar", lastName: "P" };
 
-    function greet(greeting1, greeting2) {
+function greet(greeting1, greeting2) {
+  console.log(
+    greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+  );
+}
 
-    console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
-         }
-
-    greet.apply(employee1, ['Hello', 'How are you?']); // Hello Prabir Kumar, How are you?
-    greet.apply(employee2, ['Hello', 'How are you?']); // Hello Kumar P, How are you?        
-
+greet.apply(employee1, ["Hello", "How are you?"]); // Hello Prabir Kumar, How are you?
+greet.apply(employee2, ["Hello", "How are you?"]); // Hello Kumar P, How are you?
 ```
+
 - bind():
 
 returns a new function, allowing you to pass in an array and any number of arguments
 
 ```js
-var employee1 = {firstName: 'Prabir', lastName: 'Kumar'};
-var employee2 = {firstName: 'Kumar', lastName: 'P'};
+var employee1 = { firstName: "Prabir", lastName: "Kumar" };
+var employee2 = { firstName: "Kumar", lastName: "P" };
 
 function greet(greeting1, greeting2) {
-    console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
+  console.log(
+    greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+  );
 }
 
 var inviteEmployee1 = greet.bind(employee1);
 var inviteEmployee2 = greet.bind(employee2);
-inviteEmployee1('Hello', 'How are you?'); // Hello Prabir Kumar, How are you?
-inviteEmployee2('Hello', 'How are you?'); // Hello Kumar P, How are you?
-
+inviteEmployee1("Hello", "How are you?"); // Hello Prabir Kumar, How are you?
+inviteEmployee2("Hello", "How are you?"); // Hello Kumar P, How are you?
 ```
 
   </details>
@@ -595,26 +603,25 @@ For example, Array.prototype.map(), Array.prototype.filter() and Array.prototype
 
 ```js
 const arr1 = [10, 20, 30];
-const arr2 = arr1.map(function(item) {
+const arr2 = arr1.map(function (item) {
   return item * 10;
 });
 console.log(arr2);
 ```
+
 </details>
 <br/>
-
-
 
 <details>
 <summary>What is a unary function?</summary>
 Unary function (i.e. monadic) is a function that accepts exactly one argument. Let us take an example of unary function. It stands for single argument accepted by a function.
 
 ```js
-const unaryFunction = a => console.log (a + 20); //Add 20 to the given argument and display the value
+const unaryFunction = (a) => console.log(a + 20); //Add 20 to the given argument and display the value
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is currying function?</summary>
@@ -623,16 +630,18 @@ Currying is the process of taking a function with multiple arguments and turning
 
 ```js
 function volume(length) {
-  return function(width) {
-    return function(height) {
+  return function (width) {
+    return function (height) {
       return height * width * length;
-    }
-  }
+    };
+  };
 }
 
 volume(2)(6)(3); // 36
 ```
+
 Curried functions are great to improve code re-usability and functional composition.
+
 </details>
 <br/>
 
@@ -640,9 +649,9 @@ Curried functions are great to improve code re-usability and functional composit
 <summary>What are the restrictions of web workers on DOM?</summary>
 WebWorkers do not have access to below javascript objects since they are defined in an external files
 
-  - Window object
-  - Document object
-  - Parent object
+- Window object
+- Document object
+- Parent object
 </details>
 <br/>
 
@@ -651,11 +660,13 @@ WebWorkers do not have access to below javascript objects since they are defined
 A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending. Syntax
 
 ---
+
 ```js
-const promise = new Promise(function(resolve, reject) {
+const promise = new Promise(function (resolve, reject) {
   // promise description
-})
+});
 ```
+
 Promises are used to handle asynchronous operations. They provide an alternative approach for callbacks by reducing the callback hell and writing the cleaner code.
 
 Promises have three states:
@@ -681,13 +692,14 @@ function logResult(result) {
 }
 
 add(2, 3, logResult); // logs "5"
-
 ```
+
 In this example, we have a add function that takes three arguments: two numbers (a and b) and a callback function. The add function performs a simple addition operation and then invokes the callback function with the result.
 
 We also have a second function called logResult that takes a single argument (the result of the addition) and logs it to the console.
 
 In the last line of the example, we are calling the add function and passing it the numbers 2 and 3, along with the logResult function as a callback. This causes the add function to invoke the logResult function, passing it the result of the addition (5), which in turn logs the result to the console.
+
 </details>
 <br/>
 
@@ -701,22 +713,23 @@ Let us take an example with first function invoking an API call(simulated by set
 ```js
 function firstFunction() {
   // Simulate a code delay
-  setTimeout( function() {
-    console.log('First function called');
-  }, 1000 );
+  setTimeout(function () {
+    console.log("First function called");
+  }, 1000);
 }
 function secondFunction() {
-  console.log('Second function called');
+  console.log("Second function called");
 }
 firstFunction();
 secondFunction();
 
-Output
+Output;
 // Second function called
 // First function called
-
 ```
+
 As observed from the output, javascript didnot wait for the response of first function and remaining code block get executed. So callbacks used in a way to make sure that certain code does not execute until other code finished execution.
+
 </details>
 <br/>
 
@@ -725,6 +738,7 @@ As observed from the output, javascript didnot wait for the response of first fu
 Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous logic. The callback hell looks like below,
 
 ---
+
 ```js
 async1(function() {
     async2(function() {
@@ -737,6 +751,7 @@ async1(function() {
 });
 
 ```
+
 </details>
 <br/>
 
@@ -745,45 +760,41 @@ async1(function() {
 The process of executing a sequence of asynchronous tasks one after another using promises is known as Promise chaining.
 
 ```js
-new Promise(function(resolve, reject) {
-
+new Promise(function (resolve, reject) {
   setTimeout(() => resolve(1), 1000);
-
-}).then(function(result) {
-
-  console.log(result); // 1
-  return result * 2;
-
-}).then(function(result) {
-
-  console.log(result); // 2
-  return result * 3;
-
-}).then(function(result) {
-
-  console.log(result); // 6
-  return result * 4;
-
-});
+})
+  .then(function (result) {
+    console.log(result); // 1
+    return result * 2;
+  })
+  .then(function (result) {
+    console.log(result); // 2
+    return result * 3;
+  })
+  .then(function (result) {
+    console.log(result); // 6
+    return result * 4;
+  });
 ```
+
 In the above handlers, the result is passed to the chain of .then() handlers with the below work flow,
 
 The initial promise resolves in 1 second,
-After that .then handler is called by logging the result(1) and then return a promise with the value of result * 2.
-After that the value passed to the next .then handler by logging the result(2) and return a promise with result * 3.
-Finally the value passed to the last .then handler by logging the result(6) and return a promise with result * 4.
+After that .then handler is called by logging the result(1) and then return a promise with the value of result _ 2.
+After that the value passed to the next .then handler by logging the result(2) and return a promise with result _ 3.
+Finally the value passed to the last .then handler by logging the result(6) and return a promise with result \* 4.
 
 </details>
 <br/>
-
 
 <details>
 <summary>What is eval?</summary>
 The eval() function evaluates JavaScript code represented as a string. The string can be a JavaScript expression, variable, statement, or sequence of statements.
 
 ```js
- console.log(eval('3 + 2')); //  5
+console.log(eval("3 + 2")); //  5
 ```
+
 </details>
 <br/>
 
@@ -792,10 +803,11 @@ The eval() function evaluates JavaScript code represented as a string. The strin
 The isNaN() function is used to determine whether a value is an illegal number (Not-a-Number) or not. i.e, This function returns true if the value equates to NaN. Otherwise it returns false.
 
 ```js
-isNaN('Hello') //true
-isNaN('100') //false
-typeof(NaN) //Number
+isNaN("Hello"); //true
+isNaN("100"); //false
+typeof NaN; //Number
 ```
+
 </details>
 <br/>
 
@@ -809,7 +821,7 @@ Pros:
 - Easy to write sequential asynchronous code with .then()
 - Easy to write parallel asynchronous code with Promise.all()
 - Solves some of the common problems of callbacks(call the callback too late, too early, many times and swallow errors/exceptions)
-  
+
 Cons:
 
 - It makes little complex code
@@ -822,25 +834,25 @@ Cons:
 </summary>
 Attributes are defined on the HTML markup whereas properties are defined on the DOM. For example, the below HTML element has 2 attributes type and value,
 
-
 ```js
 <input type="text" value="Name:">
 ```
+
 You can retrieve the attribute value as below,
 
 ```js
-const input = document.querySelector('input');
-console.log(input.getAttribute('value')); // Good morning
+const input = document.querySelector("input");
+console.log(input.getAttribute("value")); // Good morning
 console.log(input.value); // Good morning
 ```
 
 And after you change the value of the text field to "Good evening", it becomes like
 
 ```js
-console.log(input.getAttribute('value')); // Good morning
+console.log(input.getAttribute("value")); // Good morning
 console.log(input.value); // Good evening
-
 ```
+
 </details>
 <br/>
 
@@ -850,12 +862,13 @@ The void(0) is used to prevent the page from refreshing. This will be helpful to
 For example, the below link notify the message without reloading the page
 
 ```js
-<a href="JavaScript:void(0);" onclick="alert('Well done!')">Click Me!</a>
-
+<a href="JavaScript:void(0);" onclick="alert('Well done!')">
+  Click Me!
+</a>
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>Is JavaScript a compiled or interpreted language?</summary>
@@ -863,14 +876,12 @@ JavaScript is an interpreted language, not a compiled language. An interpreter i
 </details>
 <br/>
 
-
 <details>
 <summary>Is JavaScript a case-sensitive language?</summary>
 Yes, JavaScript is a case sensitive language. The language keywords, variables, function & object names, and any other identifiers must always be typed with a consistent capitalization of letters.
 
 </details>
 <br/>
-
 
 <details>
 <summary>What is BOM?
@@ -880,19 +891,18 @@ The Browser Object Model (BOM) allows JavaScript to "talk to" the browser. It co
 </details>
 <br/>
 
-
 <details>
 <summary>What is the use of setTimeout?</summary>
 The setTimeout() method is used to call a function or evaluates an expression after a specified number of milliseconds. For example, let us log a message after 2 seconds using setTimeout method,
 
 ```js
-setTimeout(function() { console.log("Heyy Prabir"); }, 2000);
-
+setTimeout(function () {
+  console.log("Heyy Prabir");
+}, 2000);
 ```
 
 </details>
 <br/>
-
 
 <details>
 <summary>What is the use of setInterval?
@@ -900,12 +910,13 @@ setTimeout(function() { console.log("Heyy Prabir"); }, 2000);
 The setInterval() method is used to call a function or evaluates an expression at specified intervals (in milliseconds). For example, let us log a message after 2 seconds using setInterval method,
 
 ```js
-setInterval(function() { console.log("Heyy Prabir"); }, 2000);
-
+setInterval(function () {
+  console.log("Heyy Prabir");
+}, 2000);
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>Why is JavaScript treated as Single threaded?
@@ -914,41 +925,39 @@ JavaScript is a single-threaded language. Because the language specification doe
 </details>
 <br/>
 
-
 <details>
 <summary>What is an event delegation?</summary>
 Event delegation is a technique for listening to events where you delegate a parent element as the listener for all of the events that happen inside it. For example, if you wanted to detect field changes in inside a specific form, you can use event delegation technique,
 
 ```js
-var form = document.querySelector('#registration-form');
+var form = document.querySelector("#registration-form");
 
 // Listen for changes to fields inside the form
-form.addEventListener('input', function (event) {
-
-// Log the field that was changed
-console.log(event.target);
-
-}, false);
-
+form.addEventListener(
+  "input",
+  function (event) {
+    // Log the field that was changed
+    console.log(event.target);
+  },
+  false
+);
 ```
 
 </details>
 <br/>
-
 
 <details>
 <summary>What is the purpose JSON stringify?</summary>
 When sending data to a web server, the data has to be in a string format. You can achieve this by converting JSON object into a string using stringify() method.
 
 ```js
-var userJSON = {'name': 'Prabir', age: 25}
+var userJSON = { name: "Prabir", age: 25 };
 var userString = JSON.stringify(user);
 console.log(userString); //"{"name":"Prabir","age":25}"
-
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>How do you parse JSON string?</summary>
@@ -957,12 +966,11 @@ When receiving the data from a web server, the data is always in a string format
 ```js
 var userString = '{"name":"Prabir","age":25}';
 var userJSON = JSON.parse(userString);
-console.log(userJSON);// {name: "Prabir", age: 25}
-
+console.log(userJSON); // {name: "Prabir", age: 25}
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is the purpose of clearTimeout method?</summary>
@@ -972,19 +980,18 @@ The clearTimeout() function is used in javascript to clear the timeout which has
 ```js
 var msg;
 function greeting() {
-  alert('Heyy Prabir');
+  alert("Heyy Prabir");
 }
 function start() {
-  msg =setTimeout(greeting, 4000);
+  msg = setTimeout(greeting, 4000);
 }
 function stop() {
-    clearTimeout(msg);
+  clearTimeout(msg);
 }
-
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is the purpose of clearInterval method?</summary>
@@ -993,16 +1000,16 @@ The clearInterval() function is used in javascript to clear the interval which h
 ```js
 var msg;
 function greeting() {
-  alert('Heyy Prabir');
+  alert("Heyy Prabir");
 }
 function start() {
-  msg =setInterval(greeting, 4000);
+  msg = setInterval(greeting, 4000);
 }
 function stop() {
-    clearInterval(msg);
+  clearInterval(msg);
 }
-
 ```
+
 </details>
 <br/>
 
@@ -1013,13 +1020,12 @@ In vanilla javascript, you can redirect to a new page using location property of
 
 ```js
 function redirect() {
-  window.location.href = 'newPage.html';
+  window.location.href = "newPage.html";
 }
-
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>How do you check whether a string contains a substring?
@@ -1027,28 +1033,33 @@ function redirect() {
 There are 3 possible ways to check whether a string contains a substring or not,
 
 ---
+
 a.) Using includes: ES6 provided String.prototype.includes method to test a string contains a substring.
 
 ```js
-var mainString = "prabir", subString = "prab";
-mainString.includes(subString)
-
+var mainString = "prabir",
+  subString = "prab";
+mainString.includes(subString);
 ```
+
 ---
+
 b.) Using indexOf: In an ES5 or older environments, you can use String.prototype.indexOf which returns the index of a substring. If the index value is not equal to -1 then it means the substring exist in the main string.
 
 ```js
-var mainString = "prabir", subString = "prab";
-mainString.indexOf(subString) !== -1
-
+var mainString = "prabir",
+  subString = "prab";
+mainString.indexOf(subString) !== -1;
 ```
+
 ---
+
 c.) Using RegEx: The advanced solution is using Regular expression test method(RegExp.test), which allows for testing for against regular expressions
 
 ```js
-var mainString = "prabir", regex = "/prab/";
-regex.test(mainString)
-
+var mainString = "prabir",
+  regex = "/prab/";
+regex.test(mainString);
 ```
 
 </details>
@@ -1060,17 +1071,21 @@ The break statement is used to "jumps out" of a loop. i.e, It breaks the loop an
 
 ```js
 for (i = 0; i < 10; i++) {
-  if (i === 5) { break; }
+  if (i === 5) {
+    break;
+  }
   text += "Number: " + i + "<br>";
 }
-
 ```
+
 The continue statement is used to "jumps over" one iteration in the loop. i.e, It breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
 
 ```js
 for (i = 0; i < 10; i++) {
-    if (i === 5) { continue; }
-    text += "Number: " + i + "<br>";
+  if (i === 5) {
+    continue;
+  }
+  text += "Number: " + i + "<br>";
 }
 ```
 
@@ -1089,9 +1104,9 @@ JSON arrays are written inside square brackets and array contain javascript obje
 ]
 
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>How do you generate random integers?
@@ -1099,9 +1114,10 @@ JSON arrays are written inside square brackets and array contain javascript obje
 You can use Math.random() with Math.floor() to return random integers. For example, if you want generate random integers between 1 to 10, the multiplication factor should be 10,
 
 ```js
-Math.floor(Math.random() * 10) + 1;     // returns a random integer from 1 to 10
-Math.floor(Math.random() * 100) + 1;     // returns a random integer from 1 to 100
+Math.floor(Math.random() * 10) + 1; // returns a random integer from 1 to 10
+Math.floor(Math.random() * 100) + 1; // returns a random integer from 1 to 100
 ```
+
 </details>
 <br/>
 
@@ -1109,17 +1125,18 @@ Math.floor(Math.random() * 100) + 1;     // returns a random integer from 1 to 1
 <summary>How do you change style of a HTML element in javascript?</summary>
 You can change inline style or classname of a HTML element using javascript
 
-  1. Using style property: You can modify inline style using style property
+1. Using style property: You can modify inline style using style property
 
-  ```js
+```js
 document.getElementById("title").style.fontSize = "40px";
-  ```
+```
 
-   2. Using ClassName property: It is easy to modify element class using className property
+2.  Using ClassName property: It is easy to modify element class using className property
+
 ```js
 document.getElementById("title").style.className = "custom-title";
-
 ```
+
 </details>
 <br/>
 
@@ -1129,12 +1146,12 @@ The debugger statement invokes any available debugging functionality, such as se
 
 ```js
 function getProfile() {
-// code goes here
-debugger;
-// code goes here
+  // code goes here
+  debugger;
+  // code goes here
 }
-
 ```
+
 </details>
 <br/>
 
@@ -1152,6 +1169,7 @@ No, you cannot use the reserved words as variables, labels, object or function n
 var else = "hello"; // Uncaught SyntaxError: Unexpected token else
 
 ```
+
 </details>
 <br/>
 
@@ -1161,8 +1179,11 @@ The conditional (ternary) operator is the only JavaScript operator that takes th
 
 ```js
 var isAuthenticated = false;
-console.log(isAuthenticated ? 'Hello, welcome' : 'Sorry, you are not authenticated');
+console.log(
+  isAuthenticated ? "Hello, welcome" : "Sorry, you are not authenticated"
+);
 ```
+
 </details>
 <br/>
 
@@ -1173,22 +1194,30 @@ Yes, you can apply chaining on conditional operator similar to if … else if 
 
 ```js
 function traceValue(someParam) {
-    return condition1 ? value1
-        : condition2 ? value2
-        : condition3 ? value3
-        : value4;
+  return condition1
+    ? value1
+    : condition2
+    ? value2
+    : condition3
+    ? value3
+    : value4;
 }
 
 // The above conditional operator is equivalent to:
 
 function traceValue(someParam) {
-    if (condition1) { return value1; }
-    else if (condition2) { return value2; }
-    else if (condition3) { return value3; }
-    else { return value4; }
+  if (condition1) {
+    return value1;
+  } else if (condition2) {
+    return value2;
+  } else if (condition3) {
+    return value3;
+  } else {
+    return value4;
+  }
 }
-
 ```
+
 </details>
 <br/>
 
@@ -1196,11 +1225,11 @@ function traceValue(someParam) {
 <summary>What is the difference between proto and prototype?</summary>
           The __proto__ object is the actual object that is used in the lookup chain to resolve methods, etc. Whereas prototype is the object that is used to build __proto__ when you create an object with new
 
-   ```js
-( new Employee ).__proto__ === Employee.prototype;
-( new Employee ).prototype === undefined;
+```js
+new Employee().__proto__ === Employee.prototype;
+new Employee().prototype === undefined;
+```
 
-   ```
 </details>
 <br/>
 
@@ -1211,14 +1240,14 @@ You can use Object.keys() method which is used return an array of a given object
 
 ```js
 const user = {
-  name: 'Prabir',
-  gender: 'male',
-  age: 40
+  name: "Prabir",
+  gender: "male",
+  age: 40,
 };
 
 console.log(Object.keys(user)); //['name', 'gender', 'age']
-
 ```
+
 </details>
 <br/>
 
@@ -1228,34 +1257,34 @@ The Object.create() method is used to create a new object with the specified pro
 
 ```js
 const user = {
-  name: 'Prabir',
+  name: "Prabir",
   printInfo: function () {
     console.log(`My name is ${this.name}.`);
-  }
+  },
 };
 
 const admin = Object.create(person);
 admin.name = "Kumar"; // Remember that "name" is a property set on "admin" but not on "user" object
 admin.printInfo(); // My name is Kumar
-
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is the difference between uneval and eval?</summary>
 The uneval() function returns the source of a given object; whereas the eval function does the opposite, by evaluating that source code in a different memory area.
 
 ```js
-var msg = uneval(function greeting() { return 'Hello, Prabir Kumar'; });
+var msg = uneval(function greeting() {
+  return "Hello, Prabir Kumar";
+});
 var greeting = eval(msg);
 greeting(); // returns "Hello, Prabir Kumar"
-
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is an anonymous function?</summary>
@@ -1275,14 +1304,17 @@ const myFunction = function(){ //Anonymous function assigned to a variable
 });
 
 ```
+
 Example:
 
 ```js
-var x = function (a, b) {return a * b};
+var x = function (a, b) {
+  return a * b;
+};
 var z = x(2, 10);
 console.log(z); // 20
-
 ```
+
 </details>
 <br/>
 
@@ -1291,6 +1323,7 @@ console.log(z); // 20
 A local variable takes precedence over a global variable with the same name.
 
 ---
+
 ```js
 var msg = "Good morning";
 function greeting() {
@@ -1298,8 +1331,8 @@ function greeting() {
   console.log(msg);
 }
 greeting();
-
 ```
+
 </details>
 <br/>
 
@@ -1324,6 +1357,7 @@ user.lang = 'fr';
 console.log(user.lang); // setter used to set lang as fr
 
 ```
+
 </details>
 <br/>
 
@@ -1338,7 +1372,6 @@ Below are the list of statements used in an error handling,
 </details>
 <br/>
 
-
 <details>
 <summary>Explain event delegation?
 </summary>
@@ -1349,7 +1382,6 @@ Event delegation is a technique involving adding event listeners to a parent ele
 
 </details>
 <br/>
-
 
 <details>
 <summary>What is the difference between .call and .apply?</summary>
@@ -1363,6 +1395,7 @@ function add(a, b) {
 console.log(add.call(null, 3, 2)); // 5
 console.log(add.apply(null, [3, 2])); // 5
 ```
+
 </details>
 <br/>
 
@@ -1371,7 +1404,6 @@ console.log(add.apply(null, [3, 2])); // 5
 The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
 In my experience, it is most useful for binding the value of this in methods of classes that you want to pass into other functions. This is frequently done in React components.
-
 
 </details>
 <br/>
@@ -1383,15 +1415,13 @@ In my experience, it is most useful for binding the value of this in methods of 
 
 - Asynchronous functions usually accept a callback as a parameter and execution continue on the next line immediately after the asynchronous function is invoked. The callback is only invoked when the asynchronous operation is complete and the call stack is empty. Heavy duty operations such as loading data from a web server or querying a database should be done asynchronously so that the main thread can continue executing other operations instead of blocking until that long operation to complete (in the case of browsers, the UI will freeze).
 
-
 </details>
 <br/>
 
 <details>
 <summary>What is event loop? What is the difference between call stack and task queue?</summary>
 
-
- - The event loop is a single-threaded loop that monitors the call stack and checks if there is any work to be done in the task queue. If the call stack is empty and there are callback functions in the task queue, a function is dequeued and pushed onto the call stack to be executed.
+- The event loop is a single-threaded loop that monitors the call stack and checks if there is any work to be done in the task queue. If the call stack is empty and there are callback functions in the task queue, a function is dequeued and pushed onto the call stack to be executed.
 
 - If you haven't already checked out Philip Robert's talk on the Event Loop, you should. It is one of the most viewed videos on JavaScript
 
@@ -1412,17 +1442,17 @@ A variable can be declared but not defined. When we try to access it, It will re
 
 ```js
 var x; // Declaration
-typeof x === 'undefined'; // Will return true
-
+typeof x === "undefined"; // Will return true
 ```
+
 A variable can be neither declared nor defined. When we try to reference such variable then the result will be not defined.
 
 ```js
-console.log(y);  // Output: ReferenceError: y is not defined
+console.log(y); // Output: ReferenceError: y is not defined
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is closures ?</summary>
@@ -1431,24 +1461,22 @@ A closure is a function object that has access to variables in its enclosing lex
 ```js
 function outerFunction(x) {
   let outerVariable = x;
-  
+
   return function innerFunction(y) {
     return outerVariable + y;
-  }
+  };
 }
 
 let closure = outerFunction(10);
 console.log(closure(5)); // 15
-
-
 ```
 
 In this example, the inner function innerFunction is a closure. It has access to the outerVariable variable from its enclosing scope (the outerFunction). When we invoke the closure by calling closure(5), it returns the value of outerVariable + y (10 + 5), which is 15.
 
 A closure is created when an inner function is defined inside an outer function, and the inner function references variables defined in the outer function. The inner function is returned from the outer function, and when it's invoked it has access to the scope of the outer function.
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is the difference between typeof and instanceof?</summary>
@@ -1463,23 +1491,24 @@ instanceof is much more intelligent: it works on the level of prototypes. In par
 ```js
 var dog = new Animal();
 dog instanceof Animal; // Output : true
-
 ```
+
 Here dog instanceof Animal is true since dog inherits from Animal.prototype
 
 ```js
 var name = new String("xyz");
 name instanceof String; // Output : true
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is the difference between a method and a function in javascript?</summary>
 In JS, that difference is quite subtle. A function is a piece of code that is called by name and function itself not associated with any object and not defined inside any object. It can be passed data to operate on (i.e. parameter) and can optionally return data (the return value).
 
 ---
+
 ```js
 // Function statement
 function myFunc() {
@@ -1489,29 +1518,30 @@ function myFunc() {
 // Calling the function
 myFunc();
 ```
+
 Here myFunc() function call is not associated with object hence not invoked through any object.
 
 A function can take a form of immediately invoked function expression (IIFE):
 
 ```js
-
 // Anonymous Self-invoking Function
-(function() {
+(function () {
   // Do some stuff;
 })();
-
 ```
+
 Finally there are also arrow functions:
 
 ```js
-const myFunc = arg => {
-    console.log("hello", arg)
-} 
+const myFunc = (arg) => {
+  console.log("hello", arg);
+};
 ```
+
 A method is a piece of code that is called by its name and that is associated with the object. Methods are functions. When you call a method like this obj1.myMethod(), the reference to obj1 gets assigned (bound) to this variable. In other words, the value of this will be obj1 inside myMethod.
+
 </details>
 <br/>
-
 
 <details>
 <summary>What are promises and how they are useful?</summary>
@@ -1520,9 +1550,9 @@ We use promises for handling asynchronous interactions in a sequential manner. T
 A promise object has then method, where you can specify what to do when the promise is fulfilled or rejected.
 
 You can chain then() blocks, thus avoiding the callback hell. You can handle errors in the catch() block. After a promise is set to fulfilled or rejected state, it becomes immutable.
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is this keyword in javascript? </summary>
@@ -1537,7 +1567,6 @@ The following rules are applied when we use this keyword in javascript
 </details>
 <br/>
 
-
 <details>
 <summary>What is the purpose of array slice method?
 </summary>
@@ -1545,16 +1574,15 @@ The slice() method returns the selected elements in an array as a new array obje
 
 ```js
 let arrayIntegers = [1, 2, 3, 4, 5];
-let arrayIntegers1 = arrayIntegers.slice(0,2); // returns [1,2]
-let arrayIntegers2 = arrayIntegers.slice(2,3); // returns [3]
+let arrayIntegers1 = arrayIntegers.slice(0, 2); // returns [1,2]
+let arrayIntegers2 = arrayIntegers.slice(2, 3); // returns [3]
 let arrayIntegers3 = arrayIntegers.slice(4); //returns [5]
 ```
-Note: Slice method wonot mutate the original array but it returns the subset as new array.
 
+Note: Slice method wonot mutate the original array but it returns the subset as new array.
 
 </details>
 <br/>
-
 
 <details>
 <summary>What is shallow copy and deep copy in javascript?</summary>
@@ -1579,44 +1607,45 @@ let obj = {
 let objCopy = Object.assign({}, obj);
 console.log(objCopy); // Result - { a: 1, b: 2 }
 ```
+
 A Deep copy of the object can be done using JSON.parse(JSON.stringify(object));
 
 ---
 
 ```js
-let obj = { 
+let obj = {
   a: 1,
-  b: { 
+  b: {
     c: 2,
   },
-}
+};
 let newObj = JSON.parse(JSON.stringify(obj));
 obj.b.c = 20;
 console.log(obj); // { a: 1, b: { c: 20 } }
 console.log(newObj); // { a: 1, b: { c: 2 } } (New Object Intact!)
-
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>How to avoid callback hell in javascript?</summary>
 Callback hell is a phenomenon that afflicts a JavaScript developer when he tries to execute multiple asynchronous operations one after the other. Some people call it to be the pyramid of doom.
 
 Example:
+
 ```js
-doSomething(param1, param2, function(err, paramx){
-    doMore(paramx, function(err, result){
-        insertRow(result, function(err){
-            yetAnotherOperation(someparameter, function(s){
-                somethingElse(function(x){
-                });
-            });
-        });
+doSomething(param1, param2, function (err, paramx) {
+  doMore(paramx, function (err, result) {
+    insertRow(result, function (err) {
+      yetAnotherOperation(someparameter, function (s) {
+        somethingElse(function (x) {});
+      });
     });
+  });
 });
 ```
+
 Techniques for avoiding callback hell
 
 - Write comments
@@ -1641,9 +1670,10 @@ function isPrimitive(val) {
 
 isPrimitive(myPrimitive);
 isPrimitive(myNonPrimitive);
-
 ```
+
 If the value is a primitive data type, the Object constructor creates a new wrapper object for the value. But If the value is a non-primitive data type (an object), the Object constructor will give the same object.
+
 </details>
 <br/>
 
@@ -1651,8 +1681,8 @@ If the value is a primitive data type, the Object constructor creates a new wrap
 <summary>What is babel</summary>
 Babel is a JavaScript transpiler to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Some of the main features are listed below,
 
- - Transform syntax
- - Polyfill features that are missing in your target environment (using @babel/polyfill)
+- Transform syntax
+- Polyfill features that are missing in your target environment (using @babel/polyfill)
 - Source code transformations (or codemods)
 
 </details>
@@ -1674,13 +1704,13 @@ Babel is a JavaScript transpiler to convert ECMAScript 2015+ code into a backwar
 A thunk is just a function which delays the evaluation of the value. It doesn’t take any arguments but gives the value whenever you invoke the thunk. i.e, It is used not to execute now but it will be sometime in the future. Let's take a synchronous example,
 
 ```js
-
 const add = (x, y) => x + y;
 
 const thunk = () => add(2, 3);
 
 thunk(); // 5
 ```
+
 </details>
 <br/>
 
@@ -1703,10 +1733,11 @@ const asyncThunk = function () {
 
 asyncThunk();
 ```
+
 The getData function won't be called immediately but it will be invoked only when the data is available from API endpoint. The setTimeout function is also used to make our code asynchronous. The best real time example is redux state management library which uses the asynchronous thunks to delay the actions to dispatch.
+
 </details>
 <br/>
-
 
 <details>
 <summary>Is JavaScript faster than server side script ?</summary>
@@ -1731,8 +1762,8 @@ Template literals or template strings are string literals allowing embedded expr
 
  var greeting = 'Welcome to JS World, Mr. ' + firstName + ' ' + lastName.`
 ```
-Note: You can use multi-line strings and string interpolation features with template literals.
 
+Note: You can use multi-line strings and string interpolation features with template literals.
 
 </details>
 <br/>
@@ -1743,59 +1774,57 @@ In ES5, you would have to use newline escape characters('\n') and concatenation 
 
 ```js
 console.log("This is string sentence 1\n" + "This is string sentence 2");
-
 ```
-  Whereas in ES6, You don't need to mention any newline sequence character,
 
-  ```js
+Whereas in ES6, You don't need to mention any newline sequence character,
+
+```js
 console.log(`This is string sentence
 'This is string sentence 2`);
+```
 
-  ```
 </details>
 <br/>
-
 
 <details>
 <summary>What is DOM?</summary>
 DOM stands for Document Object Model.  DOM is a programming interface for HTML and XML documents.
 When the browser tries to render an HTML document, it creates an object based on the HTML document called DOM. Using this DOM, we can manipulate or change various elements inside the HTML document.
 
- - Example of how HTML code gets converted to DOM:
-  ---
-```js
-  <html>
-  <head>
-  <title>
-    JAVASCRIPT
-    </title>
-    </head>
-    <body>
-    <p>I love js</p>
-    </body>
-    </html>
+- ## Example of how HTML code gets converted to DOM:
 
+```js
+<html>
+  <head>
+    <title>JAVASCRIPT</title>
+  </head>
+  <body>
+    <p>I love js</p>
+  </body>
+</html>
 ```
+
 </details>
 <br/>
-
 
 <details>
 <summary>What is the difference between null and undefined</summary>
 
- 1. Null:
-   - It is an assignment value which indicates that variable points to no object.
-   - Type of null is object.
-   - The null value is a primitive value that represents the null, empty, or non-existent reference.
-   - Indicates the absence of a value for a variable.
-   - Converted to zero (0) while performing primitive operations.
-  
-  2. Undefined:
-  - It is not an assignment value where a variable has been declared but has not yet been assigned a value.
-  - Type of undefined is undefined.
-  - The undefined value is a primitive value used when a variable has not been assigned a value.
-  - Indicates absence of variable itself.
-  - Converted to NaN while performing primitive operations
+1.  Null:
+
+- It is an assignment value which indicates that variable points to no object.
+- Type of null is object.
+- The null value is a primitive value that represents the null, empty, or non-existent reference.
+- Indicates the absence of a value for a variable.
+- Converted to zero (0) while performing primitive operations.
+
+2. Undefined:
+
+- It is not an assignment value where a variable has been declared but has not yet been assigned a value.
+- Type of undefined is undefined.
+- The undefined value is a primitive value used when a variable has not been assigned a value.
+- Indicates absence of variable itself.
+- Converted to NaN while performing primitive operations
 </details>
 <br/>
 
@@ -1803,17 +1832,16 @@ When the browser tries to render an HTML document, it creates an object based on
 <summary>What is the difference between window and document
 </summary>
 
- 1. Window:
+1.  Window:
 
 - It is the root level element in any web page.
 - By default window object is available implicitly in the page.
-- It has methods like alert(), confirm() and properties like document, location.
-  2. Document:
+- It has methods like alert(), confirm() and properties like document, location. 2. Document:
   - It is the direct child of the window object. This is also known as Document Object Model(DOM).
   - You can access it via window.document or document.
   - It provides methods like getElementById, getElementsByTagName, createElement etc.
-</details>
-<br/>
+  </details>
+  <br/>
 
 <details>
 <summary>What are modules
@@ -1832,7 +1860,6 @@ Below are the list of benefits using modules in javascript ecosystem
 
 </details>
 <br/>
-
 
 <details>
 <summary>What is scope in javascript
@@ -1854,7 +1881,6 @@ Objects are similar to Maps in that both let you set keys to values, retrieve th
 </details>
 <br/>
 
-
 <details>
 <summary>What is the difference between slice and splice
 </summary>
@@ -1864,7 +1890,13 @@ Objects are similar to Maps in that both let you set keys to values, retrieve th
    - Returns the subset of original array.
    - Used to pick the elements from array.
 2. Splice:
+
    - Modifies the original array(mutable).
    - Returns the deleted elements as array.
-</details>
-<br/>
+      </details>
+   <br/>
+   <details>
+   <summary>Difference between Arrays and Objects?</summary>
+      Array is a data structure that stores only Prmitive Data Types, while an Object is a more flexible collection of properties and methods that can be used to store and manipulate data Type like Prmitive or Non-Prmitive Both.
+
+   </details>
